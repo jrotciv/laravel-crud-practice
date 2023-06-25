@@ -20,6 +20,8 @@ Route::get('/forum/create', [SupportController::class, 'create'])->name('forum.c
 
 Route::get('/forum', [SupportController::class, 'index'])->name('forum.index');
 
+Route::get('/forum/{id}', [SupportController::class, 'show'])->name('forum.show');
+
 Route::get('/', function () {
     return view('welcome');
 });
