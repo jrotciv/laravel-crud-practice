@@ -23,10 +23,14 @@ class SupportController extends Controller
 
     }
 
-    public function store(Request $request)
+    public function store(Request $request, Support $support)
     {
 
-        dd($request->all());
+        $data = $request->all();
+        $data['status'] = 'ativo';
 
+        $support->create($data);
+
+        return redirect()->route('forum.index');
     }
 }
