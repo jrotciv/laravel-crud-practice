@@ -26,6 +26,8 @@ Route::get('/forum/{id}/edit', [SupportController::class, 'edit'])->name('forum.
 
 Route::put('/forum/{id}', [SupportController::class, 'update'])->name('forum.update');
 
+Route::delete('/forum/{id}', [SupportController::class, 'destroy'])->name('forum.destroy');
+
 Route::get('/', function () {
     return view('welcome');
 });

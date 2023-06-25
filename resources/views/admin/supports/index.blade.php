@@ -1,5 +1,7 @@
 <h1>Tópicos</h1>
 
+<a href="{{ route('forum.create')}}">Criar tópico</a>
+
 <table>
     <thead>
         <th>Assunto</th>
@@ -21,7 +23,3 @@
         @endforeach
     </tbody>
 </table>
-
-
-
-<a href="{{ route('forum.create')}}">Criar tópico</a>
