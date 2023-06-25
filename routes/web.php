@@ -14,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::post('/forum/store', [SupportController::class, 'store'])->name('forum.store');
+
+Route::get('/forum/create', [SupportController::class, 'create'])->name('forum.create');
+
 Route::get('/forum', [SupportController::class, 'index'])->name('forum.index');
 
 Route::get('/', function () {
