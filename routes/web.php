@@ -22,6 +22,10 @@ Route::get('/forum', [SupportController::class, 'index'])->name('forum.index');
 
 Route::get('/forum/{id}', [SupportController::class, 'show'])->name('forum.show');
 
+Route::get('/forum/{id}/edit', [SupportController::class, 'edit'])->name('forum.edit');
+
+Route::put('/forum/{id}', [SupportController::class, 'update'])->name('forum.update');
+
 Route::get('/', function () {
     return view('welcome');
 });

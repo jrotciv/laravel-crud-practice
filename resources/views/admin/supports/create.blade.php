@@ -1,4 +1,4 @@
-<h1>novo tópico</h1>
+<h1>Novo tópico</h1>
 
 <form action="{{ route('forum.store') }}" method="post">
     {{-- <input type="hidden" value="{{ csrf_token() }}" name="_token"> --}}
