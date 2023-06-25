@@ -1,5 +1,11 @@
 <h1>Editar tópico {{ $support->id }}</h1>
 
+@if ($errors->any())
+    @foreach ($errors->all() as $error)
+        {{ $error }}
+    @endforeach
+@endif
+
 <form action="{{ route('forum.update', $support->id) }}" method="post">
     {{-- <input type="hidden" value="{{ csrf_token() }}" name="_token"> --}}
     @csrf()
