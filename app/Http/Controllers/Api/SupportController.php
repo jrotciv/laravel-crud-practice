@@ -54,7 +54,7 @@ class SupportController extends Controller
      */
     public function update(StoreUpdateSupport $request, string $id)
     {
-        $support = $this->service->update(UpdateSupportDTO::makeFromRequest($request));
+        $support = $this->service->update(UpdateSupportDTO::makeFromRequest($request, $id));
 
         if (!$support){
             return response()->json([
