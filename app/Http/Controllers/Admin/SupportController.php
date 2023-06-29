@@ -74,6 +74,6 @@ class SupportController extends Controller
     {
         $this->service->delete($id);
 
-        return redirect()->route('forum.index');
+        return redirect()->route('forum.index')->with('message', 'Deletado com sucesso');
     }
 }
