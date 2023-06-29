@@ -1,6 +1,12 @@
-<h1>Tópicos</h1>
+@extends('admin/layouts/app')
 
-<a href="{{ route('forum.create')}}">Criar tópico</a>
+@section('title', 'Fórum')
+
+@section('header')
+@include('admin/supports/partials/header')
+@endsection
+
+@section('content')
 
 <table>
     <thead>
@@ -25,3 +31,5 @@
 </table>
 
 <x-pagination :paginator="$supports" :appends="$filters"/>
+
+@endsection
