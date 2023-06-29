@@ -9,7 +9,9 @@
         @foreach ($supports->items() as $support)
             <tr>
                 <td>{{ $support->subject }}</td>
-                <td>{{ getStatusSupport($support->status) }}</td>
+                <td >
+                    <x-status-support :status="$support->status"></x-status-support>
+                </td>
                 <td>{{ $support->body }}</td>
                 <td>
                     <a href="{{ route('forum.show', $support->id) }}">Detalhes</a>
