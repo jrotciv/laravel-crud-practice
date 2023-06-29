@@ -47,7 +47,7 @@ class SupportController extends Controller
     {
         $this->service->new(CreateSupportDTO::makeFromRequest($request));
 
-        return redirect()->route('forum.index');
+        return redirect()->route('forum.index')->with('message', 'Criado com sucesso');
     }
 
     public function edit(string $id)
@@ -67,7 +67,7 @@ class SupportController extends Controller
             return redirect()->back();
         }
 
-        return redirect()->route('forum.index');
+        return redirect()->route('forum.index')->with('message', 'Atualizado com sucesso');
     }
     
     public function destroy(string $id)
